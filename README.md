@@ -22,3 +22,7 @@ _The data analysis process consists of the following steps_
 #### 3. C is for comprehensive : Data minute-level output for physical activity, heart rate, and sleep monitoring. While the data tracks many factors in the user activity and sleep, but the sample size is small and most data is recorded during certain days of the week.
 #### 4.  C is for current :Data is from March 2016 to May 2016.
 #### 5. C is for Cited : Unknown.
+#### Limitations : 1. Data for only 30 people is available. A larger sample size is preferred for the analysis.
+
+# 3. PROCESS
+
