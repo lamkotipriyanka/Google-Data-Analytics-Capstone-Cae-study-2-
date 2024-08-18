@@ -2,7 +2,7 @@
 # How can a Wellness Technology Company play it smart? - Bellabeat
 #### Author - Priyanka Lamkoti,
 #### Date : 15 August, 2024
-_The data analysis process consists of the following steps_
+_The data analysis process consists of the following steps:_
 ### Step 1 - ASK 
 ### Step 2 - PREPARE
 ### Step 3 - PROCESS
@@ -26,5 +26,60 @@ _The data analysis process consists of the following steps_
 
 # 3. PROCESS
 #### First we import our zip file into our R cloud(Posit cloud), make a new R script and start cleaning our data. To do so we first import 3 csv file datasets: daily_activity, sleep_day, weight. Installing packages and loading it is our next step.
+```
+install.packages('tidyverse')
+library(tidyverse)
+install.packages('here')
+library(here)
+install.packages('skimr')
+library(skimr)
+install.packages('janitor')
+library(janitor)
+install.packages('dplyr')
+library(dplyr)
+```
 #### We find the NA values in the columns for daily_activity and sleep_day and eliminate them. We also find the missing or duplicate values and do some transformations to bring the datset into a correct format.
-#### Next we combine the sleep_day and daily_activity into a single 
+```
+dim(sleep_day)
+sum(is.na(sleep_day))
+sum(duplicated(sleep_day))
+sleep_day <- sleep_day[!duplicated(sleep_day), ]
+```
+
+#### Next we combine the sleep_day and daily_activity into a single combined_data and then merge this with the weight data to form merged_data.
+```
+merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
+```
+#### Visualization helps non-technical users understand our data easier.
+![scatter plot case study](https://github.com/user-attachments/assets/a908b0bb-1454-4c7c-9308-2c0c1fdbb63a)
+
+![2nd plot- scatterplot](https://github.com/user-attachments/assets/ccb371ff-48d8-44ff-ac0a-4ee0bcb11621)
+
+# 4.ANALYZE
+#### Summary - We get to check the 1st quartile ,median ,mean, median, minimum, maximum,3rd quartile, NAs etc. 
+```
+merged_data %>%
+dplyr::select(Weekday,
+              TotalSteps,
+              TotalDistance,
+              VeryActiveMinutes,
+              FairlyActiveMinutes,
+              LightlyActiveMinutes,
+              SedentaryMinutes,
+              Calories,
+              TotalMinutesAsleep,
+              TotalTimeInBed,
+              WeightPounds,
+              BMI
+) %>%
+  summary()
+```
+#### Next we plot a Pie chart to display Activity level minutes:
+![newplot](https://github.com/user-attachments/assets/b92de514-e3cc-4acc-b676-80136e44c93b)
+Most users spent 81.3% of their daily activity in sedentary minutes and only 1.74% in very active minutes.
+
+
+
+
+
+
