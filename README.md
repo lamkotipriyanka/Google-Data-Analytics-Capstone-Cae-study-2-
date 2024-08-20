@@ -78,6 +78,23 @@ dplyr::select(Weekday,
 ![newplot](https://github.com/user-attachments/assets/b92de514-e3cc-4acc-b676-80136e44c93b)
 Most users spent 81.3% of their daily activity in sedentary minutes and only 1.74% in very active minutes.
 
+![plot3](https://github.com/user-attachments/assets/80859e9c-815c-4df8-a8e9-4103537bd94f)
+
+![plot4](https://github.com/user-attachments/assets/dd2dc830-6264-468b-892a-3464f9fe00a0)
+
+Here we see that even if users are sedentary ,take minimal steps, they still are able to burn over 1500 to 2500 calories.
+
+#### Hourly Steps
+![plot5](https://github.com/user-attachments/assets/d502b331-fa31-4485-a8f5-6c7ee030d50c)
+#### Weekly Steps
+![image](https://github.com/user-attachments/assets/3c9f0938-28da-4865-be5b-22f411bacc10)
+
+# SHARE
+Bellabeat Data Analysis Dashboard
+
+
+
+
 
 
 
